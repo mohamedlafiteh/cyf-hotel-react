@@ -1,20 +1,12 @@
 import React from "react";
-const imgStyle = {
-  backgroundColor: `#f7901e`,
-  height: `50px`,
-  width: `2000px`,
-
-  display: `inline - block`,
-  overflow: `hidden`
-};
 
 const Heading = () => {
   return (
     <div>
       <header className="App-header">CYF Hotel</header>
       <img
-        style={imgStyle}
-        src="https://image.flaticon.com/icons/svg/139/139899.svg"
+        className="App-logo"
+        src="https://cdn.pixabay.com/photo/2016/12/13/14/56/stars-1904262_960_720.png"
       />
     </div>
   );

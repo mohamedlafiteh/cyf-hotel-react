@@ -1,11 +1,11 @@
 import React from "react";
-import Bookings from "./Bookings";
+import Moment from "moment";
 
 const SearchResults = props => {
   //console.log(props);
   return (
-    <table>
-      <thead>
+    <table class="table">
+      <thead className="thead-dark">
         <tr>
           <th>Id</th>
           <th>Title</th>
@@ -15,20 +15,30 @@ const SearchResults = props => {
           <th>Room Id</th>
           <th>Check In</th>
           <th>Check Out</th>
+          <th>Days</th>
         </tr>
       </thead>
       <tbody>
-        <tr />
-        <tr>
-          <td>{props.booking.id}</td>
-          <td>{props.booking.title}</td>
-          <td>{props.booking.firstName}</td>
-          <td>{props.booking.surname}</td>
-          <td>{props.booking.email}</td>
-          <td>{props.booking.roomId}</td>
-          <td>{props.booking.checkInDate}</td>
-          <td>{props.booking.checkOutDate}</td>
-        </tr>
+        {props.bookingList.map(item => {
+          return (
+            <tr>
+              <td>{item.id}</td>
+              <td>{item.title}</td>
+              <td>{item.firstName}</td>
+              <td>{item.surname}</td>
+              <td>{item.email}</td>
+              <td>{item.roomId}</td>
+              <td>{item.checkInDate}</td>
+              <td>{item.checkOutDate}</td>
+              <td>
+                {Moment(item.checkOutDate).diff(
+                  Moment(item.checkInDate),
+                  "days"
+                )}
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );

@@ -7,7 +7,7 @@ const info = [
 
 const Footer = () => {
   return (
-    <ul>
+    <ul className="footer">
       {info.map(function(string, index) {
         return <li key={index}> {string}</li>;
       })}
