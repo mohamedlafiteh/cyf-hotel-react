@@ -1,5 +1,5 @@
 import React from "react";
-
+import Clock from "./Clock";
 const Heading = () => {
   return (
     <div>
@@ -8,6 +8,7 @@ const Heading = () => {
         className="App-logo"
         src="https://cdn.pixabay.com/photo/2016/12/13/14/56/stars-1904262_960_720.png"
       />
+      <Clock />
     </div>
   );
 };

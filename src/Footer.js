@@ -1,4 +1,5 @@
 import React from "react";
+
 const info = [
   "123 Fake Street, London, E1 4UD",
   "hello@fakehotel.com",
