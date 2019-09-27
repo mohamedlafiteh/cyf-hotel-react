@@ -55,3 +55,18 @@ tr {
 .card {
   width: 18rem;
 }
+
+th,
+td {
+  width: 10%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: grey;
+}
+
+td {
+  background-color: rgb(236, 232, 191);
+}
